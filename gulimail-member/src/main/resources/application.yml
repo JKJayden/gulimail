@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://192.168.197.133:3306/gulimail_ums
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.197.133:8848
+  application:
+    name: gulimail-member
+
+mybatis-plus:
+  mapper-locations: classPath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+
+server:
+  port: 8000
